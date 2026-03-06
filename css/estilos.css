@@ -1,0 +1,529 @@
+
+/*VERSIÓN DESKTOP*/
+
+body {
+    background-color: #F5EFE6;
+    color: #3A2F28;
+    margin: 0;
+     font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+/* NAV */
+.menu-portfolio {
+    background-color: #b8ab9a;
+    padding: 25px 0;
+}
+
+.menu-portfolio .navbar-brand {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #3A2F28;
+}
+
+.menu-portfolio .nav-link {
+    color: #3A2F28;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu-portfolio .nav-link:hover {
+    opacity: 0.6;
+}
+
+/* HERO INDEX TEXTOS E IMÁGENES */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-texto {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-texto h2 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+/* GALERÍAS INDEX */
+.home-galerias {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 100px 80px;
+}
+
+.home-item {
+    width: 40%;
+    height: 480px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.home-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+}
+
+.home-item:hover img {
+    transform: scale(1.06);
+    opacity: 0.85;
+}
+
+.home-item h3 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 26px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.home-item:hover h3 {
+    transform: translateY(-6px);
+}
+
+/*  PRESENTACIÓN POLAROIDS Y BOOK */
+.presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 30px 80px;
+}
+
+.foto-principal {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.descripcion {
+    max-width: 400px;
+}
+
+.descripcion h2 {
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.descripcion p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.descripcion ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* GALERÍAS (BOOK / POLAROIDS)*/
+.seccion {
+    margin-bottom: 120px;
+}
+
+.seccion img {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.seccion img:hover {
+    opacity: 0.85;
+}
+
+/* MODAL / CARRUSEL*/
+.carousel-item img {
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+/* PIE DE PÁGINA*/
+footer {
+    background-color: #7b695c;
+    padding: 20px 0;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 200px;
+}
+
+.footer-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    text-align: center;
+    color: beige;
+}
+
+.footer-item img {
+    width: 34px;
+    margin-bottom: 12px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-item img:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.footer-item p {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* CONTENEDOR GENERAL FOOTER */
+.footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+/* CONTACTO CENTRADO */
+.footer-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+/* MODAL GALERÍAS*/
+.modal-custom {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-custom.activo {
+    display: flex;
+}
+
+.modal-custom img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+/* CERRAR */
+.cerrar {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* FLECHAS GALERÍAS POLAS Y BOOK */
+.nav {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 40px;
+}
+
+.next {
+    right: 40px;
+}
+
+.nav:hover,
+.cerrar:hover {
+    opacity: 0.7;
+}
+
+/*BIOGRAFÍA*/
+
+.biografia {
+    padding: 4rem 1rem;
+}
+
+.biografia-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.biografia h1 {
+    
+    margin-bottom: 3rem;
+    font-size: 50px;
+}
+
+.biografia-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.biografia-imagen img {
+    width: 380px;      
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 4rem;
+}
+
+.biografia-texto {
+    max-width: 600px;
+}
+
+.biografia-texto p {
+    line-height: 1.8;
+    font-size: 1rem;
+}
+.biografia-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+
+
+
+/*VERSIÓN MOBILE*/
+
+@media (max-width: 568px){
+
+body {
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*NAV*/
+
+      .menu-portfolio .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+
+    /*IMÁGENES INDEX Y TEXTO*/
+
+    .hero {
+        height: auto;
+    }
+
+    .hero img {
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .hero-texto {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-texto p {
+        font-size: 0.9rem;
+    }
+
+    /*PRESENTACIÓN POLAS Y BOOK*/
+
+     .presentacion {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .foto-principal {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .descripcion {
+        max-width: 100%;
+    }
+
+    .descripcion h2 {
+        font-size: 1.6rem;
+    }
+
+    .descripcion p {
+        font-size: 0.9rem;
+    }
+
+    .descripcion ul {
+        padding-left: 0;
+        list-style-position: inside;
+        font-size: 0.85rem;
+    }
+
+    /*SECCIÓN DE GALERÍAS*/
+
+     .seccion .col-md-4,
+    .seccion .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .seccion img {
+        border-radius: 6px;
+    }
+
+    
+    .seccion .col-md-4,
+    .seccion .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /*MODAL DE GALERÍAS*/
+    
+    .modal-custom {
+        padding: 1rem;
+    }
+
+    .modal-custom img {
+        max-width: 90%;
+        max-height: 70vh;
+    }
+
+    .modal-custom .nav {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .modal-custom .cerrar {
+        font-size: 2rem;
+        top: 15px;
+        right: 20px;
+    }
+
+    /*GALERIA INDEX*/
+    .home-galerias {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .home-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .home-item h3 {
+        font-size: 1.3rem;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    /*PIE DE PÁGINA*/
+
+       footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        max-width: 80px;
+    }
+
+    .footer-contacto {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-item img {
+        width: 28px;
+    }
+
+    .footer-item p {
+        font-size: 0.8rem;
+    }
+
+    /*BIOGRAFÍA*/
+
+    
+    .biografia-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .biografia-texto {
+        max-width: 100%;
+    }
+
+
+}
